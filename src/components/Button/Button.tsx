@@ -10,7 +10,7 @@ export interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  primary = false,
+  primary,
   size = 'medium',
   label,
   onClick,

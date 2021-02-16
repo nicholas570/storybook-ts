@@ -18,6 +18,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Button',
+  onClick: (): void => console.log('test'),
 };
 
 export const Secondary = Template.bind({});
@@ -31,8 +32,7 @@ Large.args = {
   label: 'Button',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+// Both works
+export const Small = (): JSX.Element => (
+  <Button label="Button" size="small" primary />
+);
