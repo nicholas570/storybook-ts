@@ -1,3 +1,25 @@
 .input {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  border: 1px solid #ee4b58;
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.input-medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.input-large {
+  font-size: 16px;
+  padding: 12px 24px;
 }
