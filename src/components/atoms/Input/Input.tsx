@@ -6,7 +6,7 @@ export interface InputProps {
   type: string;
   size?: 'small' | 'medium' | 'large';
   placeholder?: string;
-  onChange: (e: React.FormEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input: React.FC<InputProps> = ({

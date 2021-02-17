@@ -3,6 +3,7 @@ import React from 'react';
 import './Button.css';
 
 export interface ButtonProps {
+  submit?: boolean;
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
@@ -11,6 +12,7 @@ export interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({
+  submit,
   primary,
   backgroundColor,
   size = 'medium',
@@ -23,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
     : 'storybook-button--secondary';
   return (
     <button
-      type="button"
+      type={submit ? 'submit' : 'button'}
       className={['storybook-button', `storybook-button--${size}`, mode].join(
         ' ',
       )}
