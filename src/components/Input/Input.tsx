@@ -19,6 +19,7 @@ export const Input: React.FC<InputProps> = ({
     <input
       type={type}
       placeholder={placeholder}
+      aria-label={placeholder}
       className={['input', `input-${size}`].join(' ')}
       onChange={onChange}
     />

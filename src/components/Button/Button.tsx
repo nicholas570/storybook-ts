@@ -4,6 +4,7 @@ import './Button.css';
 
 export interface ButtonProps {
   primary?: boolean;
+  backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
@@ -11,8 +12,9 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   primary,
+  backgroundColor,
   size = 'medium',
-  label,
+  label = 'Button',
   onClick,
   ...props
 }) => {
@@ -25,6 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={['storybook-button', `storybook-button--${size}`, mode].join(
         ' ',
       )}
+      style={{ backgroundColor }}
       {...props}
       onClick={onClick}
     >

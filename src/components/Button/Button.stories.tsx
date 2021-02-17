@@ -1,5 +1,4 @@
 import React from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react';
 
 import { Button, ButtonProps } from './Button';
@@ -8,7 +7,9 @@ export default {
   title: 'Form/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: {
+      control: 'color',
+    },
   },
 } as Meta;
 
@@ -32,7 +33,7 @@ Large.args = {
   label: 'Button',
 };
 
-// Both works
+// Both works but no addons with this syntax
 export const Small = (): JSX.Element => (
   <Button label="Button" size="small" primary />
 );

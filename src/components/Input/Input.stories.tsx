@@ -12,7 +12,7 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 
 export const Large = Template.bind({});
 Large.args = {
-  type: 'text',
+  type: 'password',
   placeholder: 'Password',
   size: 'large',
   onChange: (e): void => console.log(e.currentTarget.value),
@@ -20,14 +20,14 @@ Large.args = {
 
 export const Medium = Template.bind({});
 Medium.args = {
-  type: 'text',
+  type: 'password',
   placeholder: 'Password',
   onChange: (e): void => console.log(e.currentTarget.value),
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  type: 'text',
+  type: 'password',
   placeholder: 'Password',
   size: 'small',
   onChange: (e): void => console.log(e.currentTarget.value),
