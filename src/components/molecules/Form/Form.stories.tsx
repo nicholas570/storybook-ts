@@ -20,8 +20,6 @@ FormDisabled.args = {
   ...Disabled.args,
 };
 
-console.log(FormDisabled.args);
-
 export const FormActive = Template.bind({});
 FormActive.args = {
   ...Primary.args,

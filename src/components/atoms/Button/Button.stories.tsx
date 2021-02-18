@@ -19,6 +19,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Valider',
+  disabledB: false,
 };
 
 export const PrimaryLarge = Template.bind({});
