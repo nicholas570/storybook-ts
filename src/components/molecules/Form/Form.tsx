@@ -15,7 +15,6 @@ const FormContainer: React.FC = ({ ...props }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.currentTarget.value);
-    console.log(value);
   };
 
   return (
