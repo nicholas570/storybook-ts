@@ -18,22 +18,55 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
-  onClick: (): void => console.log('test'),
+  label: 'Valider',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
+export const PrimaryLarge = Template.bind({});
+PrimaryLarge.args = {
+  ...Primary.args,
   size: 'large',
-  label: 'Button',
 };
 
-// Both works but no addons with this syntax
-export const Small = (): JSX.Element => (
-  <Button label="Button" size="small" primary />
-);
+export const PrimarySmall = Template.bind({});
+PrimarySmall.args = {
+  ...Primary.args,
+  size: 'small',
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  label: 'Envoyé',
+  success: true,
+  disabledB: true,
+};
+
+export const SuccessLarge = Template.bind({});
+SuccessLarge.args = {
+  ...Success.args,
+  size: 'large',
+};
+
+export const SuccessSmall = Template.bind({});
+SuccessSmall.args = {
+  ...Success.args,
+  size: 'small',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  primary: true,
+  label: 'Valider',
+  disabledB: true,
+};
+
+export const DisabledLarge = Template.bind({});
+DisabledLarge.args = {
+  ...Disabled.args,
+  size: 'large',
+};
+
+export const DisabledSmall = Template.bind({});
+DisabledSmall.args = {
+  ...Disabled.args,
+  size: 'small',
+};
